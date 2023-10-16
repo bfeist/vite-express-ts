@@ -14,4 +14,19 @@ export default defineConfig({
     port: 5100,
   },
   plugins: [react()],
+  root: "./src",
+  build: {
+    outDir: "../dist",
+    assetsDir: "assets",
+    sourcemap: true,
+    manifest: true,
+    rollupOptions: {
+      input: "index.html",
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+        },
+      },
+    },
+  },
 });

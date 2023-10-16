@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "target": "es2016",
-    "jsx": "react-jsx",
+    "target": "es6",
+    "jsx": "preserve",
     "module": "commonjs",
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./dist",
+    "rootDir": ".",
+    "resolveJsonModule": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
     "baseUrl": ".",
@@ -13,8 +16,12 @@
     "strict": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "types": ["node"],
+    "typeRoots": ["./src/typings/*.d.ts", "./node_modules/@types"],
+    "paths": {
+      "*": ["*"]
+    },
 
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
     // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
@@ -25,7 +32,7 @@
     // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
     // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
 
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-    "resolveJsonModule": true
-  }
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
 }

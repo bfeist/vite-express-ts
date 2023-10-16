@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ROOT_URL } from "./constants";
-import { commonExample } from "./utils";
+import { ROOT_URL } from "src/constants";
+import { commonExample } from "src/utils";
 import styles from "./App.module.css";
 
 function App() {
