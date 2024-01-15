@@ -3,15 +3,18 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
     "target": "es6",
     "jsx": "preserve",
-    "module": "commonjs",
+    "module": "ES6",
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./.local/vite/dist",
     "rootDir": ".",
     "resolveJsonModule": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
@@ -19,9 +22,6 @@
     "noUnusedParameters": false,
     "types": ["node"],
     "typeRoots": ["./src/typings/*.d.ts", "./node_modules/@types"],
-    "paths": {
-      "*": ["*"]
-    },
 
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
     // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
@@ -34,5 +34,5 @@
 
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

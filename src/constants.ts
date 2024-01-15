@@ -1,1 +1,1 @@
-export const ROOT_URL = "/api/v1";
+export const ROOT_URL = "/api/v1/";

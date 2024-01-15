@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"vite\" \"node --loader ts-node/esm --no-warnings src/server/server.ts\"",
-    "build": "vite build",
-    "serve": "ts-node src/server/server.ts"
+    "dev": "concurrently -n vite,server \"vite\" \"npm run api:dev\"",
+    "vite:build": "vite build",
+    "vite:dev": "vite",
+    "api:build": "rimraf ./.local/express/dist && esbuild --sourcemap ./src/server/express/server.ts --bundle --format=cjs --platform=node --external:@mikro-orm/mongodb --external:@mikro-orm/mysql --external:@mikro-orm/mariadb --external:@mikro-orm/sqlite --external:@mikro-orm/better-sqlite --external:@mikro-orm/entity-generator --external:sqlite3 --external:mysql --external:mysql2 --external:better-sqlite3 --external:oracledb --external:pg-query-stream --external:tedious --outfile=./.local/express/dist/api.js",
+    "api:build:watch": "npm run api:build -- --watch",
+    "api:dev": "concurrently -n build,serve \"npm run api:build:watch\" \"wait-on ./.local/express/dist/api.js && nodemon --inspect=8229 --legacy-watch --watch ./.local/express/dist ./.local/express/dist/api.js ./src/server\""
   },
   "keywords": [],
   "author": "",
@@ -16,13 +19,17 @@
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
     "@vitejs/plugin-react": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/css-modules": "^1.0.3",
     "@types/express": "^4.17.18",
     "@types/react": "^18.0.27",
@@ -30,6 +37,8 @@
     "@vitejs/plugin-react": "^3.1.0",
     "concurrently": "^8.2.1",
     "prettier": "^3.0.3",
-    "vite": "^4.4.11"
+    "rimraf": "^5.0.5",
+    "vite": "^4.4.11",
+    "wait-on": "^7.2.0"
   }
 }

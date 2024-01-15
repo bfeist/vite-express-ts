@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { ROOT_URL } from "src/constants";
-import { commonExample } from "src/utils";
+import { ROOT_URL } from "@/constants";
+import { commonExample } from "@/utils";
 import styles from "./App.module.css";
 
 function App() {
   const [data, setData] = useState<RespExampleType>();
-  const urlWithProxy = ROOT_URL;
+  const urlWithProxy = `${ROOT_URL}/version`;
 
   commonExample();
 
@@ -20,7 +20,7 @@ function App() {
       <button className={styles.button} onClick={getDataFromServer}>
         Access server using proxy
       </button>
-      <p>data : {data?.text}</p>
+      <p>data : {data?.version}</p>
     </div>
   );
 }
