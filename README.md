@@ -8,6 +8,7 @@ This is a web application boilerplate that integrates React, Vite, Express, and 
 
 - React for building user interfaces.
 - Vite (with swc) for an ultra-fast frontend development experience.
+  - Includes css modules
 - Vite for front-end builds
 - Express for API endpoints
 - TypeScript for adding type safety to JavaScript.
@@ -21,11 +22,14 @@ This is a web application boilerplate that integrates React, Vite, Express, and 
 - File-based routing (`/src/pages` for all routes)
 - `/src/public` for static assets
 
+### Notes
+
+- Express .env reference is the typical `process.env.VALUE`
+- Client-side (build time by Vite) .env reference is `import.meta.env.VALUE`
+
 ## TODO:
 
 - [ ] Make docker build configs (nginx frontend server proxying api endpoints in node container)
-- [ ] css modules
-- [ ] dotenv
 
 ## Installation
 
@@ -36,6 +40,8 @@ git clone https://github.com/bfeist/vite-express-ts.git
 cd vite-express-ts
 npm install
 ```
+
+Then create a `.env` file by copying `.env.sample` to `.env`
 
 ## Usage
 

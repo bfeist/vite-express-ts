@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-    "target": "es6",
+    "target": "es2022",
     "jsx": "preserve",
-    "module": "ES6",
+    "module": "es2022",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./.local/vite/dist",

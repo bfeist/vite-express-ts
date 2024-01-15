@@ -14,6 +14,7 @@ app.get(`${ROOT_URL}version`, (req: Request, res: Response) => {
   const respObj: RespExampleType = {
     id: 1,
     version: packageJSON.version,
+    envVal: process.env.ENV_VALUE as string, // sample server-side env value
   };
   res.send(respObj);
 });
