@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "concurrently -n vite,server \"npm run vite:dev\" \"npm run api:dev\"",
     "build": "npm run vite:build && npm run api:build",
@@ -31,7 +32,7 @@
     "@types/node": "^20.11.2",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
@@ -42,7 +43,7 @@
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "vite": "^4.4.11",
+    "vite": "^5.0.11",
     "vite-plugin-eslint": "^1.8.1",
     "wait-on": "^7.2.0"
   }
