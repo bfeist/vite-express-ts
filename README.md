@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a modern web application boilerplate that integrates React, Vite, Express, and TypeScript. This setup provides a robust development environment with hot module replacement for the frontend and an efficient build system for both frontend and backend.
+This is a web application boilerplate that integrates React, Vite, Express, and TypeScript. This setup provides a robust development environment with hot module replacement for the frontend and an efficient build system for both frontend and backend.
 
 ## Features
 
@@ -11,16 +11,17 @@ This is a modern web application boilerplate that integrates React, Vite, Expres
 - Vite for front-end builds
 - Express for API endpoints
 - TypeScript for adding type safety to JavaScript.
+- vscode debugging for frontend / backend
 - Esbuild for efficient backend builds.
 - Proxying of api endpoints through Vite environment during development
+- Common typings between frontend and backend
+- esLint with rules from recent projects
+- prettier with the standard rules
+- File-based routing (`/src/pages` for all routes)
+- `/src/public` for static assets
 
 ## TODO:
 
-- [x] Make dev env config
-- [x] Working debugging for frontend / backend
-- [x] Make build work locally without docker
-- [x] Linting
-- [x] Routing in React
 - [ ] Jest
 - [ ] Make docker build configs (nginx frontend server proxying api endpoints in node container)
 
