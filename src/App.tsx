@@ -1,29 +1,9 @@
-import { useState } from "react";
-import { ROOT_URL } from "@/constants";
-import { commonExample } from "@/utils";
-import styles from "./App.module.css";
+import { Suspense } from "react";
+import { useRoutes } from "react-router-dom";
+import routes from "~react-pages";
 
 function App(): JSX.Element {
-  const [data, setData] = useState<RespExampleType>();
-  const urlWithProxy = `${ROOT_URL}version`;
-
-  commonExample();
-
-  async function getDataFromServer(): Promise<void> {
-    const res = await fetch(urlWithProxy);
-    const data: RespExampleType = await res.json();
-    setData(data);
-  }
-
-  return (
-    <div className={styles.app}>
-      <img src="/images/nasa-logo.svg" alt="nasa logo" />
-      <button className={styles.button} onClick={getDataFromServer}>
-        Access server using proxy
-      </button>
-      <p>data : {data?.version}</p>
-    </div>
-  );
+  return <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>;
 }
 
 export default App;

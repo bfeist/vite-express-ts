@@ -20,9 +20,9 @@ This is a modern web application boilerplate that integrates React, Vite, Expres
 - [x] Working debugging for frontend / backend
 - [x] Make build work locally without docker
 - [x] Linting
-- [ ] Routing in React
-- [ ] Make docker build configs (nginx frontend server proxying api endpoints in node container)
+- [x] Routing in React
 - [ ] Jest
+- [ ] Make docker build configs (nginx frontend server proxying api endpoints in node container)
 
 ## Installation
 
