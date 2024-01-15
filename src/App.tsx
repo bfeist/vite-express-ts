@@ -3,13 +3,13 @@ import { ROOT_URL } from "@/constants";
 import { commonExample } from "@/utils";
 import styles from "./App.module.css";
 
-function App() {
+function App(): JSX.Element {
   const [data, setData] = useState<RespExampleType>();
   const urlWithProxy = `${ROOT_URL}version`;
 
   commonExample();
 
-  async function getDataFromServer() {
+  async function getDataFromServer(): Promise<void> {
     const res = await fetch(urlWithProxy);
     const data: RespExampleType = await res.json();
     setData(data);
