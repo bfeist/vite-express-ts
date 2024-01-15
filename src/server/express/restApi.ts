@@ -18,4 +18,11 @@ app.get(`${ROOT_URL}version`, (req: Request, res: Response) => {
   res.send(respObj);
 });
 
+// default route for serving flat files built by Vite
+// app.get("/", (req: Request, res: Response) => {
+//   res.sendFile("index.html", { root: "./.local/vite/dist" });
+// });
+
+app.use(express.static("./.local/vite/dist"));
+
 export default app;

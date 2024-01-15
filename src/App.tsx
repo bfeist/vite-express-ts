@@ -5,7 +5,7 @@ import styles from "./App.module.css";
 
 function App() {
   const [data, setData] = useState<RespExampleType>();
-  const urlWithProxy = `${ROOT_URL}/version`;
+  const urlWithProxy = `${ROOT_URL}version`;
 
   commonExample();
 
@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <img src="/images/nasa-logo.svg" alt="nasa logo" />
       <button className={styles.button} onClick={getDataFromServer}>
         Access server using proxy
       </button>

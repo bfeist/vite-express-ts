@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: "./src/entrypoints/frontend",
+  root: "./src",
   plugins: [react()],
   resolve: {
     alias: {
@@ -22,12 +22,11 @@ export default defineConfig({
     port: 5100,
   },
   build: {
-    outDir: "../../../.local/vite/dist",
+    outDir: "../.local/vite/dist",
     assetsDir: "assets",
     sourcemap: true,
     manifest: true,
     rollupOptions: {
-      input: "index.html",
       output: {
         manualChunks: {
           react: ["react", "react-dom"],
