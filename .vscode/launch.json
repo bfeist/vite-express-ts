@@ -4,14 +4,14 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Attach to Node",
+      "name": "Express attach",
       "skipFiles": ["<node_internals>/**"],
-      "port": 9229
+      "port": 8229
     },
     {
       "type": "chrome",
       "request": "attach",
-      "name": "Attach to Chrome",
+      "name": "Chrome attach",
       "port": 9222,
       "urlFilter": "http://localhost:5100/*",
       "webRoot": "${workspaceFolder}"
