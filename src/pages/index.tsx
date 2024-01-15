@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../App.module.css";
 import { ROOT_URL } from "@/constants";
-import { commonExample } from "@/utils";
+import { commonExample } from "@/utils/utils";
 
 const HomePage = (): JSX.Element => {
   const urlWithProxy = `${ROOT_URL}version`;

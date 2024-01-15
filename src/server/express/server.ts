@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { createServer } from "http";
 import app from "./restApi";
-import { commonExample } from "@/utils";
+import { commonExample } from "@/utils/utils";
 // import { createWebSocketServer } from "path/to/websocket";
 
 commonExample();

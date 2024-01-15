@@ -17,13 +17,15 @@ This is a web application boilerplate that integrates React, Vite, Express, and 
 - Common typings between frontend and backend
 - esLint with rules from recent projects
 - prettier with the standard rules
+- Jest testing setup with one example test file
 - File-based routing (`/src/pages` for all routes)
 - `/src/public` for static assets
 
 ## TODO:
 
-- [ ] Jest
 - [ ] Make docker build configs (nginx frontend server proxying api endpoints in node container)
+- [ ] css modules
+- [ ] dotenv
 
 ## Installation
 

@@ -20,7 +20,7 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "typeRoots": ["./src/typings/*.d.ts", "./node_modules/@types"],
 
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
