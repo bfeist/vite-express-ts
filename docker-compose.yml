@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./.local/certs:/etc/pki/tls/certs
+      - ./.local/private:/etc/pki/tls/private
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "443:443"
+    networks:
+      - boilerplate-network
+
+  express:
+    build:
+      context: .
+      dockerfile: /docker/express/Dockerfile
+      target: prod
+    networks:
+      - boilerplate-network
+
+networks:
+  boilerplate-network:
+    driver: bridge

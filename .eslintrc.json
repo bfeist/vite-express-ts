@@ -52,7 +52,7 @@
           {
             "name": "react-redux",
             "importNames": ["useSelector", "shallowEqual"],
-            "message": "Use useAppSelector() instead of useSelector(), and refEqual()/shallowEqual()/deepEqual() from useAppSelector.ts versus other locations. These functions provide better Aegis-specific defaults."
+            "message": "Use useAppSelector() instead of useSelector(), and refEqual()/shallowEqual()/deepEqual() from useAppSelector.ts versus other locations. These functions provide better defaults."
           },
           {
             "name": "assert",

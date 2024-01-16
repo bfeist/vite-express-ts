@@ -20,8 +20,10 @@ app.get(`${ROOT_URL}version`, (req: Request, res: Response) => {
 });
 
 app.use(express.static("./.local/vite/dist"));
-app.get("*", (req: Request, res: Response) => {
-  res.sendFile("./.local/vite/dist/index.html", { root: "./" });
-});
+
+// This is for SPA, but we don't need express to do this because Vite does it for us in dev, and nginx does it for us in prod (docker)
+// app.get("*", (req: Request, res: Response) => {
+//   res.sendFile("./.local/vite/dist/index.html", { root: "./" });
+// });
 
 export default app;

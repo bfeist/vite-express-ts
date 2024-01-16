@@ -15,7 +15,10 @@
     "tsc": "tsc --pretty",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
     "test": "jest",
-    "test:all": "npm run lint && npm run tsc && npm run build && npm run test"
+    "test:all": "npm run lint && npm run tsc && npm run build && npm run test",
+    "docker:preview": "docker compose -f docker-compose.yml up -d",
+    "docker:preview:rebuild": "docker compose -f docker-compose.yml build",
+    "docker:preview:rebuild:nocache": "docker compose -f docker-compose.yml build --no-cache"
   },
   "keywords": [],
   "author": "",
