@@ -86,13 +86,13 @@ Note: the express server
 
 - `npm run docker:preview:rebuild`
   - Builds two docker images:
-  - `nginx`
-    - vite is used to build to static assets in `/.local/vite/dist`
-    - these are copied into the nginx image at the default nginx path
-    - `/api/v1/` routes are proxied to the `express` server
-  - `express`
-    - esbuild is used to build to a static file `api.js`
-    - this file is copied to a node container and run with `node /api.js`
+    - `nginx`
+      - vite is used to build the front-end (React) to static assets in `/.local/vite/dist`
+      - these are copied into the nginx image at the default nginx path
+      - `/api/v1/` routes are proxied to the `express` server
+    - `express`
+      - esbuild is used to build to a static file `/.local/express/dist/api.js`
+      - this file is copied to a node container and run with `node /api.js`
 - `npm run docker:preview` to start the containers
 - Go to `https://localhost` to hit the nginx server
 
