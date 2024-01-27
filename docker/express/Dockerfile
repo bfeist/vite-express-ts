@@ -1,5 +1,5 @@
 # Base image optionally from arg
-ARG EXPRESS_BASE_IMAGE=node:20.9.0-alpine
+ARG EXPRESS_BASE_IMAGE=node:20.11.0-alpine
 
 # # # # # # # #
 # BASE image  #
