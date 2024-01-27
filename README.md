@@ -78,9 +78,7 @@ After building, start the production server with:
 npm run start
 ```
 
-This runs a simple `node ./.local/express/dist/api.js` command.
-
-Note: the express server
+This runs a simple `node ./.local/express/dist/api.js` command to start the express server that serves the `/api/v1` endpoints.
 
 ### Deploy via Docker
 
