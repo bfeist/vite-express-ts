@@ -1,10 +1,9 @@
 import { useState } from "react";
 import styles from "./index.module.css";
-import { ROOT_URL } from "@/constants";
 import { commonExample } from "@/utils/utils";
 
 const HomePage = (): JSX.Element => {
-  const urlWithProxy = `${ROOT_URL}version`;
+  const urlWithProxy = `api/v1/version`;
   const [data, setData] = useState<RespExampleType | null>(null);
 
   commonExample();
