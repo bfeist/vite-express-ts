@@ -24,12 +24,12 @@ export default defineConfig({
   server: {
     proxy: {
       "/api/v1": {
-        target: "http://localhost:5000/",
+        target: "http://localhost:9001/",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api\/v1/, ""),
       },
     },
-    port: 5100,
+    port: 9000,
   },
   build: {
     outDir: "../.local/vite/dist",
