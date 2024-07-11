@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 import { createServer } from "http";
-import app from "./restApi";
-import { commonExample } from "@/utils/utils";
+import app from "./restApi.ts";
+import { commonExample } from "@/utils/utils.ts";
 // import { createWebSocketServer } from "path/to/websocket";
 
 commonExample();

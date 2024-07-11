@@ -9,6 +9,11 @@ app.use(express.json({ limit: "20mb" }));
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve a successful response. For use with wait-on
+app.get("/api/v1/health", (req, res) => {
+  res.send({ status: "ok" });
+});
+
 app.get(`/api/v1/version`, (req: Request, res: Response) => {
   const respObj: RespExampleType = {
     id: 1,
@@ -19,10 +24,5 @@ app.get(`/api/v1/version`, (req: Request, res: Response) => {
 });
 
 app.use(express.static("./.local/vite/dist"));
-
-// This is for SPA, but we don't need express to do this because Vite does it for us in dev, and nginx does it for us in prod (docker)
-// app.get("*", (req: Request, res: Response) => {
-//   res.sendFile("./.local/vite/dist/index.html", { root: "./" });
-// });
 
 export default app;
