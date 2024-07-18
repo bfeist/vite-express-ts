@@ -3,8 +3,8 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
     "target": "es2022",
     "jsx": "preserve",
-    "module": "es2022",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "sourceMap": true,
     "outDir": "./.local/vite/dist",
     "rootDir": ".",
@@ -15,6 +15,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
@@ -22,7 +24,6 @@
     "noUnusedParameters": false,
     "types": ["node", "jest"],
     "typeRoots": ["./src/typings/*.d.ts", "./node_modules/@types"],
-
     // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
     // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
     // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
@@ -31,7 +32,6 @@
     // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
     // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
     // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
-
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
