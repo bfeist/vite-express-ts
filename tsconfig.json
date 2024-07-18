@@ -4,7 +4,7 @@
     "target": "es2022",
     "jsx": "preserve",
     "module": "ESNext",
-    "moduleResolution": "Node", // Changed to NodeNext
+    "moduleResolution": "Node",
     "sourceMap": true,
     "outDir": "./.local/vite/dist",
     "rootDir": ".",
