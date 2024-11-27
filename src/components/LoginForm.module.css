@@ -1,0 +1,37 @@
+form > input:not(:placeholder-shown):valid {
+  outline-color: green;
+}
+
+form > input:not(:placeholder-shown):invalid {
+  outline-color: red;
+}
+
+form > input:not(:placeholder-shown):focus:invalid {
+  outline-color: orange;
+}
+
+form > input {
+  outline: 3px solid hsl(203, 30%, 26%);
+  display: block;
+  width: 100%;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid hsl(0, 0%, 20%);
+  border-radius: 0.25rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid hsl(0, 0%, 20%);
+  border-radius: 0.25rem;
+  background: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+button:hover {
+  background: hsl(0, 0%, 20%);
+}

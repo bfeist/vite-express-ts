@@ -3,3 +3,4 @@ build/
 coverage/
 .local/
 .env
+database.db

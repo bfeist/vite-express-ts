@@ -1,5 +1,4 @@
-type RespExampleType = {
-  id: number;
-  version: string;
-  envVal: string;
+type User = {
+  username: string;
+  password: string;
 };

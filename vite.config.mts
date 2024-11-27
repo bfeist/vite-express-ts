@@ -1,21 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import eslint from "vite-plugin-eslint";
-import Pages from "vite-plugin-pages";
 import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   root: "./src",
   envDir: "../",
-  plugins: [
-    react(),
-    eslint(),
-    Pages({
-      pagesDir: [{ dir: "pages", baseRoute: "" }],
-      extensions: ["tsx"],
-    }),
-  ],
+  plugins: [react(), eslint()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -26,7 +18,6 @@ export default defineConfig({
       "/api/v1": {
         target: "http://localhost:9001/",
         changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api\/v1/, ""),
       },
     },
     port: 9000,

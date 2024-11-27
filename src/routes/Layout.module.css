@@ -1,0 +1,9 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  padding: 1rem;
+}
