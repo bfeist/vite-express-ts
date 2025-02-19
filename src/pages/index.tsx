@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, JSX } from "react";
 import styles from "./index.module.css";
 import { commonExample } from "@/utils/utils.ts";
 

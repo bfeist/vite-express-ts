@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 const TestPage = (): JSX.Element => {
   return (
     <div>
